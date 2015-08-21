@@ -7,9 +7,12 @@
   <strong><%= movie.title %></strong>
   <p><%= movie.released %> | <%= movie.rating %></p>
   <div class="meta">
-    <%= link_to "Show", movie %>
+    <%= link_to "Show", movie %> 
     <span class="admin">
-      <%= link_to "Edit", edit_movie_path(movie) %>
+      | <%= link_to "Edit", edit_movie_path(movie) %> |
+      <%= link_to "New", new_movie_path(movie) %> |
       <%= link_to "Delete", movie, method: :delete, data: { confirm: "Are you sure you want to delete this movie?"} %>
+  </div>
+</div>
 
 <% end %>
